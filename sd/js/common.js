@@ -16,7 +16,6 @@
             case 'page-b':
                 document.querySelector('.page-a').setAttribute('class',"page-a bg-adaptive effect-out")
                 document.querySelector('.page-b').setAttribute('class',"page-b bg-adaptive effect-in")
-                
                 break;
             case 'page-c':
                 document.querySelector('.page-c').setAttribute('class',"page-c bg-adaptive effect-in")
@@ -32,4 +31,35 @@
                 break;
         }
     },false)
+
+    //音乐
+    document.querySelectorAll('button')[0].onclick = function(){
+        var audio = HTML5Audio('../music/circulation.mp3');
+        audio.end(function(){
+            console.log('音乐结束')
+        })
+    }
+    document.querySelectorAll('button')[1].onclick = function(){
+        var audio = HTML5Audio('../music/circulation.mp3');
+        audio.end(function(){
+            HTML5Audio('../music/circulation.mp3',true);
+        })
+    }
+
  }
+
+ function HTML5Audio(url, loop) {
+    var audio = new Audio(url);
+    audio.autoplay = true;
+    audio.loop = loop || false; //是否循环
+    audio.play();
+    return {
+        end: function(callback) {
+            audio.addEventListener('ended', function() {
+                callback()
+            }, false);
+        }
+    }
+}
+
+

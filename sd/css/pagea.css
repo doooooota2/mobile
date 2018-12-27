@@ -1,0 +1,80 @@
+.page-a .moon{
+	width:8rem;
+	height:8rem;
+	border-radius:50%;
+	background-color:#fcf0bc;
+	position:absolute;
+	top:2rem;
+	left:15rem;
+	z-index: 5;
+	animation:moon-change 2s infinite;
+}
+
+@keyframes moon-change{
+	50%{box-shadow: 0rem 0rem 1rem 1rem  #82958d}
+}
+
+.page-a .tree{
+	width:14rem;
+	height:20rem;
+	background-image: url("../images/a/trees.png");
+	background-size: 200% 100%;
+	z-index:15;
+	position:absolute;
+	bottom:0;
+	left:1rem;
+	animation:tree-change 1s steps(2) infinite;
+}
+@keyframes tree-change{
+	0%{background-position-x:0;}
+	100%{background-position-x:200%;}
+}
+.page-a .cloudy{
+	background-color:#60768d;
+	width:4rem;
+	height:4rem;
+	border-radius:50%;
+	position:absolute;
+	top:2rem;
+	left:4rem;
+	z-index:15;
+	box-shadow: 3rem 1rem 0 1rem #60768d,-1rem 2rem 0 0.5rem #60768d,1.5rem 2rem 0 1rem #60768d,-2rem 0.4rem 0 0.75rem #60768d;
+}
+.page-a .boy{
+	position:absolute;
+	top:0;
+	right:0;
+	width:2.5rem;
+	height:1.0rem;
+	z-index:30;
+	background-image:url("../images/a/boy-sleigh-car.png");
+	background-size:400% 100%;
+	
+}
+.boy-move{
+	animation:boy 0.5s steps(4) infinite;
+}
+@keyframes boy{
+	0%{background-position-x:400%;}
+	100%{background-position-x:0%;}
+}
+
+.page-a .boy-right{
+	transform:rotateY(180deg);
+	-webkit-transform:rotateY(180deg);
+	width:40rem;
+	height:16rem;
+}
+.page-a .star{
+	position:absolute;
+	bottom: 17rem;
+	left: 6.75rem;
+	width:5rem;
+	height: 5rem;
+	z-index:20;
+}
+
+
+
+
+

@@ -5,13 +5,35 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>圣诞主题</title>
     <link rel='stylesheet' href='css/common.css' />
+    <link rel="stylesheet" href="css/pagea.css">
     <script src="js/common.js"></script>
+    <script src="js/jquery1.9.1.js"></script>
+    <script src="js/pageA.js"></script>
 </head>
 
 <body>
     <section class="container">
         <!-- 第一幅画面 -->
         <section class="page-a bg-adaptive">
+            <!-- 男孩 -->
+            <div class="boy boy-move"></div>
+            <!-- 月亮 -->
+            <figure class="moon"></figure>
+            <!-- 圣诞树 -->
+            <svg viewBox="0 0 1000 800" class="star">
+                <defs>
+                    <linearGradient id="star" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#FCF0BC"></stop>
+                        <stop offset="0%" stop-color="#FCF0BC"></stop>
+                    </linearGradient>
+                </defs>
+                <polygon style="fill: url(#star);" points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 "></polygon>
+            </svg>
+            <figure class="tree"></figure>
+            <!-- 云 -->
+            <figure class="cloudy"></figure>
+            <!-- 窗户 -->
+            <div class="window"></div>
         </section>
         <!-- 第二幅画面 -->
         <section class="page-b bg-adaptive">
@@ -26,6 +48,8 @@
         <option value="page-b">2</option>
         <option value="page-c">3</option>
     </select>
+    <button>点击播放音乐</button>
+    <button>点击播放循环音乐</button>
 </body>
 <script type="text/javascript">
 
