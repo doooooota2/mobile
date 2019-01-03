@@ -1,0 +1,63 @@
+.page-b .girl{
+	z-index: 11;
+	position:absolute;
+	background-image: url('../images/b/girl.png');
+	width:21.875rem;
+	height:25.4375rem;
+	background-size: 2100% 100%;
+	background-position: 0;
+	top:18rem;
+	left:7rem;
+	animation:gs 2s 0.5s  steps(1) forwards;
+}
+.page-b .cat{
+	z-index:10;
+	position:absolute;
+	background-image: url('../images/b/cat.png');
+	width:5rem;
+	height:2.5rem;
+	background-size: 100%;
+	top: 32rem;
+	left: 23rem;
+	animation:cat 2.5s 0.5s steps(1) forwards;
+}
+
+@keyframes gs{
+	0%{}
+	100%{background-position:-100%;top:18rem;}
+}
+@keyframes gm{
+	0%{background-position: -200%;top:23rem;left:10rem;}
+	100%{background-position: -1000%;top:23rem;left:30rem;})
+}
+@keyframes cat{
+	100%{background-image:url("../images/b/cat-book.png");}
+}
+
+.page-b .boy1{
+	z-index: 11;
+	position:absolute;
+	background-image: url('../images/b/boy.png');
+	width:21.875rem;
+	height:25.4375rem;
+	background-size: 1500% 100%;
+	background-position: 0;
+	top:23rem;
+	right:-22rem;
+	
+}
+.boy-walk{
+	animation:bm1 0.75s 0s steps(4,end) infinite;
+}
+@keyframes bm1{
+	0% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: -400% 100%;
+    }
+
+}
+.page-b .boy-stand{
+	background-position:-400% 100%;
+}

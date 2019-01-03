@@ -74,6 +74,64 @@
 	z-index:20;
 }
 
+.page-a .window{
+	position: absolute;
+	top: 40vw;
+	bottom: 0;
+	left: 61vw;
+	right: 0;
+	width:20rem;
+	height:10rem;
+	z-index:30;
+	background-image:url("../images/a/page-a-window-bg.png");
+	background-size: 100%;
+	perspective: 500rem;
+	transform-style:preserve-3d;
+}
+
+.page-a .window .window-left{
+	position: absolute;
+	width:9.9rem;
+	height:9.1rem;
+	z-index:35;
+	background-size: 100% 100%;
+	background-image:url("../images/a/window-left.png");
+	animation:wl 2s ease 12s forwards;
+	transform-origin: left top;
+}
+@keyframes wl{
+	100%{
+		transform: rotateY(-100deg);
+	}
+}
+
+.page-a .window .window-right{
+	position: absolute;
+	z-index:35;
+	left:10.1rem;
+	width:9.9rem;
+	height:9.1rem;
+	background-image:url("../images/a/window-right.png");
+	background-size: 100%;
+	animation:wr 2s ease 12s forwards;
+	transform-origin: right top;
+}
+@keyframes wr{
+	100%{
+		transform: rotateY(100deg);
+	}
+}
+.page-a .window .window-bottom{
+	position: absolute;
+	z-index:35;
+	width:20rem;
+	height: 1rem;
+	top: 9rem;
+	background-image:url("../images/a/window-bottom.png");
+	background-size: 100%;
+	box-shadow: 0rem 1rem 0.5rem;
+}
+
 
 
 

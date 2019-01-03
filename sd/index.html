@@ -6,8 +6,11 @@
     <title>圣诞主题</title>
     <link rel='stylesheet' href='css/common.css' />
     <link rel="stylesheet" href="css/pagea.css">
+    <link rel="stylesheet" href="css/pageb.css">
     <script src="js/common.js"></script>
+    
     <script src="js/jquery1.9.1.js"></script>
+    <script src="js/pageB.js"></script>
     <script src="js/pageA.js"></script>
 </head>
 
@@ -33,10 +36,17 @@
             <!-- 云 -->
             <figure class="cloudy"></figure>
             <!-- 窗户 -->
-            <div class="window"></div>
+            <div class="window">
+                <div class="window-left"></div>
+                <div class="window-right"></div>
+                <div class="window-bottom"></div>
+            </div>
         </section>
         <!-- 第二幅画面 -->
         <section class="page-b bg-adaptive">
+            <div class="girl"></div>
+            <div class="boy1 boy-walk"></div>
+            <div class="cat"></div>
         </section>
         <!-- 第三幅画面 -->
         <section class="page-c bg-adaptive">
@@ -69,6 +79,9 @@ var docEl = doc.documentElement,
             //原始比例
         var proportion = 900 / 1440;
         container.style.height = container.clientWidth * proportion + "px";
+        console.log(container.clientWidth);
+        document.querySelector("html").style.fontSize = 16*container.clientWidth/1440 +"px";
+
     };
 window.addEventListener(resizeEvt, recalc, false);
 doc.addEventListener('DOMContentLoaded', recalc, false);
